@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Employee Management System</h1>
+  <p class="subtitle">FastAPI + MySQL CRUD Application</p>
+
+  <div class="card">
+    <h2>Add / Update Employee</h2>
+
+    <input id="empId" type="hidden">
+
+    <div class="form-grid">
+      <input id="name" placeholder="Full Name">
+      <input id="email" placeholder="Email Address">
+      <input id="department" placeholder="Department">
+      <input id="salary" placeholder="Salary">
+    </div>
+
+    <div class="button-group">
+      <button class="primary" onclick="addEmployee()">Add</button>
+      <button class="warning" onclick="updateEmployee()">Update</button>
+      <button class="secondary" onclick="resetForm()">Clear</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Employee List</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable"></tbody>
+    </table>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
